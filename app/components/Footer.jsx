@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
+  const Year = new Date().getFullYear();
   return (
-    <div>
-      Footer
-    </div>
-  )
+    <>
+      <footer>
+        <p>Copyright © {Year} WebRizen LLP - All rights reserved</p>
+      </footer>
+    </>
+  );
 }
