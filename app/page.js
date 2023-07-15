@@ -62,7 +62,7 @@ export default function Home() {
           <span></span>
         </div>
         <div className={styles.leftHome}>
-          <span className={styles.been}><CampaignIcon /> #1 Website Development Agency in Assam, India.</span>
+          <span className={styles.been}><CampaignIcon /> #1 Full Stack Web Dev Agency.</span>
           <h1>Going Beyond Web, <br /> Creating Web Applications With Your Imaginations.</h1>
           <p>
             We are a team of developers who are passionate about creating web applications. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur itaque, animi molestias temporibus architecto consequatur eos, laudantium maxime in laboriosam doloremque sint ex illo eaque beatae at iure, dolores eligendi.
