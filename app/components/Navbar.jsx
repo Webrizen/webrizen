@@ -11,6 +11,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -27,7 +28,6 @@ export default function Navbar() {
     { label: 'Get a proposal', link: '/proposal' },
     { label: 'About', link: '/about' },
     { label: 'Contact', link: '/contact' },
-    { label: 'Support', link: '/support' },
     { label: 'Blogs', link: '/blogs' },
     { label: 'Testimonials', link: '/testimonials' },
     { label: 'Legal', link: '/legal' },
@@ -52,8 +52,12 @@ export default function Navbar() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               WebRizen
             </Typography>
+            <Link href='/login'>
             <Button color="inherit">Login</Button>
+            </Link>
+            <Link href='/signup'>
             <Button color="inherit">Signup</Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>
@@ -61,8 +65,8 @@ export default function Navbar() {
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer} >
         <List sx={{ width: '250px' }}>
           {menuItems.map((item, index) => (
-            <ListItem button key={index} component="a" href={item.link} sx={{ padding: '10px 20px' }}>
-              <ListItemText primary={item.label} />
+            <ListItem button key={index} component={Link} href={item.link} sx={{ padding: '10px 20px' }}>
+              <ListItemText primary={item.label} onClick={toggleDrawer} />
             </ListItem>
           ))}
         </List>
