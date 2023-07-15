@@ -49,6 +49,13 @@
 }
 .rightHome > img{
     mix-blend-mode: darken;
+    animation: UpDownMove 5s ease-in-out infinite;
+}
+
+@keyframes UpDownMove{
+    50%{
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes move {
