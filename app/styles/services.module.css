@@ -1,0 +1,28 @@
+.Services{
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 40px 60px;
+}
+.card{
+    width: 100%;
+    height: fit-content;
+    border: 0.1px solid silver;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Button{
+    width: min-content;
+    white-space: nowrap;
+    background: linear-gradient(50deg, #088395, #0A4D68);
+    color: #fff;
+}
