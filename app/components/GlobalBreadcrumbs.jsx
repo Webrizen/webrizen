@@ -7,27 +7,39 @@ import HomeIcon from '@mui/icons-material/Home';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
 
-export default function GlobalBreadcrumbs() {
-  const router = useRouter();
-  const pathSegments = router.pathname.split('/').filter((segment) => segment);
 
+export default function GlobalBreadcrumbs() {
   return (
     <>
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link href="/">Home</Link>
-      {pathSegments.map((segment, index) => {
-        const isLastSegment = index === pathSegments.length - 1;
-        const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
-
-        return isLastSegment ? (
-          <Typography key={segment}>{segment}</Typography>
-        ) : (
-          <Link key={segment} href={href}>
-            {segment}
-          </Link>
-        );
-      })}
-    </Breadcrumbs>
+    <div role="presentation">
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link
+          underline="hover"
+          sx={{ display: 'flex', alignItems: 'center' }}
+          color="inherit"
+          href="/"
+        >
+          <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+          MUI
+        </Link>
+        <Link
+          underline="hover"
+          sx={{ display: 'flex', alignItems: 'center' }}
+          color="inherit"
+          href="/material-ui/getting-started/installation/"
+        >
+          <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+          Core
+        </Link>
+        <Typography
+          sx={{ display: 'flex', alignItems: 'center' }}
+          color="text.primary"
+        >
+          <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+          Breadcrumb
+        </Typography>
+      </Breadcrumbs>
+    </div>
     </>
   );
 }
