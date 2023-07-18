@@ -26,3 +26,14 @@
     background: linear-gradient(50deg, #088395, #0A4D68);
     color: #fff;
 }
+@media only screen and (max-width: 768px) {
+    .Services{
+        grid-template-columns: 1fr;
+        padding: 10px;
+        height: auto;
+    }
+    .card > img{
+        width: 100%;
+        height: 100%;
+    }
+}

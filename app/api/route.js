@@ -28,16 +28,18 @@ export async function GET(request) {
       ],
       portfolio: [
         {
+          id: '01',
           title: "NHSE GP REALTECH",
           description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est doloribus voluptatem itaque quia nemo eius consectetur saepe deserunt sequi consequatur corporis! Quos et non vitae. Odio dicta ab molestiae?",
           link: "https://nhsegprealtech.com/",
-          IMG: "https://nhsegprealtech.com/wp-content/uploads/2022/12/cropped-WhatsApp-Image-2022-12-03-at-19.43.03-2-180x180.jpeg",
+          image: "/placeholder.svg",
         },
         {
+          id: "02",
           title: "Reactjsofficial",
           description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est doloribus voluptatem itaque quia nemo eius consectetur saepe deserunt sequi consequatur corporis! Quos et non vitae. Odio dicta ab molestiae?",
           link: "https://reactjsofficial.com/",
-          IMG: "https://www.reactjsofficial.com/favicon.png",
+          image: "/placeholder.svg",
         }
       ],
     };

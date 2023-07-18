@@ -73,6 +73,9 @@
         width: 100%;
         height: 100%;
     }
+    .css-cuefkz-MuiContainer-root{
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 280px) {
