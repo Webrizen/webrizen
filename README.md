@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# WebRizen: Going Beyond Web - A Prominent Web Design & Development Agency
 
-First, run the development server:
+![WebRizen Logo](https://webrizen.netlify.app/assets/images/Webrizen.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**WebRizen** is a full-service web development agency specializing in creating bespoke web solutions tailored to meet your unique business needs. We empower your business with dynamic and flaming web solutions, offering a range of services including building web-based SaaS products, selling services, and applications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## About the Founder - Arshahdul Ahmed (17 Years Old)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div align="center">
+  <img src="https://cdn.truelancer.com/user-picture/2291453-64bde53e0a49b.jpg" alt="Founder Arshahdul Ahmed" width="200px" style="border-radius: 50%;" />
+</div>
 
-## Learn More
+Hello there, I am Arshahdul Ahmed, and I live and breathe technology. As an experienced Full Stack Developer, I have danced my way through diverse landscapes. I have built seamless experiences using Next.js, MERN Stack, and polished them with the magic of Tailwind CSS.
 
-To learn more about Next.js, take a look at the following resources:
+But my curiosity does not stop at the surface – I have delved into the realms of AI & ML, adding an exciting layer of intelligence to my creations. From crafting eye-catching designs to mastering the intricacies of PHP, WordPress, and APIs, I bring versatility to every project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I have tamed the wild web with platforms like Sanity.io, Firebase, Supabase, and conquered the cloud with AWS. And when it comes to collaboration, GitHub is where I thrive, turning lines of code into collaborative masterpieces.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Join me on this journey of turning ideas into reality, one innovation at a time!
 
-## Deploy on Vercel
+## Contact Us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To learn more about our services and how we can help your business succeed in the digital world, feel free to reach out to us:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website: [https://webrizen.in](https://webrizen.netlify.app)
+- Email: info@webrizen.in
+- Phone: +918761820422
