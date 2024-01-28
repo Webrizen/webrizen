@@ -10,16 +10,17 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Navbar() {
     const { setTheme } = useTheme()
     return (
-        <header className="p-2 bg-[rgba(225,225,225,0.1)] backdrop-blur-3xl">
+        <header className="p-2 bg-[rgba(225,225,225,0.1)] backdrop-blur-3xl z-50">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="h-8 w-auto flex gap-2 justify-start items-center p-1 rounded-md hover:bg-[rgba(225,225,225,0.05)]">
+                <Link href="/" className="h-8 w-auto flex gap-2 justify-start items-center p-1 rounded-md hover:bg-[rgba(225,225,225,0.05)]">
                     <Image src="/Webrizen.png" alt="Webrizen Logo" width={500} height={500} className="h-full w-auto" />
                     <span>Webrizen</span>
-                </div>
+                </Link>
                 <div className="w-full flex justify-end items-center gap-2">
                     <Button asChild className="bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded hover:backdrop-blur-lg">
                         <a href="https://cal.com/webrizen">Schedule a Call</a>

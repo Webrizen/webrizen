@@ -1,9 +1,24 @@
 import Image from "next/image";
+import HeroImg from "@/assets/hero.png";
+import { Button } from "@/components/ui/button";
+import AnimatedImage from "@/components/system/AnimatedImage";
 
 export default function Home() {
   return (
     <>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque obcaecati iste pariatur, debitis necessitatibus iure id dolor aut culpa, neque, quasi minus iusto magni veritatis eos soluta deleniti dolores? Excepturi recusandae voluptates eum accusamus dolores officiis corporis eligendi, itaque iste. Fuga aut magnam soluta ratione cupiditate? Enim dolores debitis consequuntur nesciunt aut corrupti quam repellendus voluptate, obcaecati aspernatur consectetur accusantium magni quae neque nihil iure ea. Harum non numquam aperiam rem laboriosam est in quos architecto? Quas odit ratione nobis quam commodi incidunt quia, illo tenetur impedit reiciendis eius ut dolores nulla, omnis possimus ea sint. Repellendus iusto quibusdam explicabo voluptatem nobis dolorem eum, reprehenderit quo, corporis sapiente officia? Eum laudantium dolores suscipit illo ducimus, inventore ipsum consequatur sed temporibus, atque consequuntur. Nulla distinctio itaque suscipit eaque tempore sapiente aspernatur inventore in fugit unde rem tempora nemo ullam iusto vero illo doloribus veritatis quos beatae, corporis sequi accusamus ad sunt doloremque. Quaerat animi impedit, tempora quam facere excepturi sint molestias temporibus ex similique corrupti ab ullam? Doloribus, architecto, et alias fugiat, earum tempore porro quos tempora quas possimus esse vel? Vero quod praesentium recusandae officia tempore perspiciatis assumenda qui a asperiores modi repudiandae dolores magnam sit inventore accusamus, atque veritatis.
+      <section className="min-h-screen w-full flex justify-center items-center">
+        <div className="container mx-auto grid grid-cols-2 h-full">
+          <div className="w-full p-2 h-full flex justify-center flex-col gap-5">
+            <h1 className="text-6xl font-bold">Rise Online with Webrizen.</h1>
+            <p className="text-base dark:text-slate-300 text-slate-900">Elevate your brand, captivate your audience. Webrizen — where innovation meets impact in the digital realm. Unleash the extraordinary online experience effortlessly.</p>
+            <div className="mt-2 flex justify-start items-center gap-2">
+            <Button className="w-min">Build My Website</Button>
+            <Button className="w-min" variant="ghost">Our Products</Button>
+            </div>
+          </div>
+          <AnimatedImage src={HeroImg} />
+        </div>
+      </section>
     </>
   );
 }
