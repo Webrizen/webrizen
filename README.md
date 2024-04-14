@@ -8,7 +8,7 @@
 
 </div>
 
-## About the Founder - Arshahdul Ahmed (17 Years Old)
+## About the Founder - Arshahdul Ahmed (Arsh)
 
 <div align="center">
   <img src="https://cdn.truelancer.com/user-picture/2291453-64bde53e0a49b.jpg" alt="Founder Arshahdul Ahmed" width="200px" style="border-radius: 50%;" />
