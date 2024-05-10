@@ -1,6 +1,6 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function Home() {
   return (
@@ -22,11 +22,14 @@ export default function Home() {
           <div className="md:text-left text-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8">
               where every move is strategic, every design a masterstroke.{" "}
-              <a href="#" className="font-semibold dark:text-indigo-300 text-indigo-600">
+              <Link
+                href="#"
+                className="font-semibold dark:text-indigo-300 text-indigo-600"
+              >
                 <span className="absolute inset-0" aria-hidden="true"></span>
                 Digital Dominance with Webrizen{" "}
                 <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
             <h1 className="text-4xl font-bold dark:text-slate-100 text-gray-900 sm:text-6xl">
               Make a move that creates a game.
@@ -76,18 +79,18 @@ export default function Home() {
               </span>
             </div>
             <div class="flex md:justify-start whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4">
-              <a
+              <Link
                 href="#"
                 class="flex items-center h-12 px-6 bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded-full  hover:backdrop-blur-lg"
               >
                 Hire us Now
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 class="flex items-center h-12 px-6 rounded-full bg-gray-100 dark:bg-gray-900 text-purple-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center items-center">
