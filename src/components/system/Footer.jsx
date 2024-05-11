@@ -278,7 +278,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="px-5 sm:px-10 md:px-12 lg:px-5 flex justify-center text-center py-3 rounded-md">
-            <p> © 2023 UnifyUI. All right reserved </p>
+            <p> © {new Date().getFullYear()} Webrizen. All right reserved </p>
           </div>
         </div>
       </footer>
