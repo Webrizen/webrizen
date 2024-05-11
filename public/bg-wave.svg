@@ -1,13 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700"><defs><linearGradient gradientTransform="rotate(-150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="gggrain-gradient2"><stop stop-color="hsla(194, 73%, 12%, 1.00)" stop-opacity="1" offset="-0%"></stop><stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%"></stop></linearGradient><linearGradient gradientTransform="rotate(150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="gggrain-gradient3"><stop stop-color="hsl(227, 74%, 16%)" stop-opacity="1"></stop><stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%"></stop></linearGradient><filter id="gggrain-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
-  <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="colormatrix"></feColorMatrix>
-  <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="colormatrix" result="componentTransfer">
-    <feFuncR type="linear" slope="3"></feFuncR>
-    <feFuncG type="linear" slope="3"></feFuncG>
-    <feFuncB type="linear" slope="3"></feFuncB>
-  </feComponentTransfer>
-  <feColorMatrix x="0%" y="0%" width="100%" height="100%" in="componentTransfer" result="colormatrix2" type="matrix" values="1 0 0 0 0
-          0 1 0 0 0
-          0 0 1 0 0
-          0 0 0 19 -11"></feColorMatrix>
-  </filter></defs><g><rect width="100%" height="100%" fill="hsl(0, 83%, 17%)"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient3)"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient2)"></rect><rect width="100%" height="100%" fill="transparent" filter="url(#gggrain-filter)" opacity="1" style="mix-blend-mode: soft-light"></rect></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><radialGradient id="sssurface-grad-dark" r="75%" cx="20%" cy="20%">
+  <stop offset="0%" stop-color="hsl(230, 55%, 40%)" stop-opacity="0"></stop>
+  <stop offset="100%" stop-color="#001b6f" stop-opacity="1"></stop>
+</radialGradient><radialGradient id="sssurface-grad-light" r="25%" cx="30%" cy="30%">
+<stop offset="0%" stop-color="#656cd0" stop-opacity="0.75"></stop>
+<stop offset="100%" stop-color="hsl(230, 55%, 40%)" stop-opacity="0"></stop>
+</radialGradient><filter id="sssurface-blur" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="30" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g><ellipse rx="150" ry="75" cx="450" cy="500" fill="#000043" opacity="0.25" filter="url(#sssurface-blur)"></ellipse><circle r="150" cx="400" cy="400" fill="hsl(230, 55%, 40%)"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-dark)"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-light)"></circle></g></svg>
