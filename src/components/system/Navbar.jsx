@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { motion } from 'framer-motion';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -12,30 +11,21 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Webrizen from "@/assets/Webrizen.png"
 
 const Navbar = () => {
     const { setTheme, theme } = useTheme();
 
-    // Framer Motion Variants
-    const variants = {
-        initial: { opacity: 0, y: -10 },
-        animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-        hover: { scale: 1.1 },
-    };
-
     return (
-        <motion.header
+        <header
             className="p-2 bg-[rgba(225,225,225,0.1)] backdrop-blur-3xl z-50 sticky top-0"
-            variants={variants}
-            initial="initial"
-            animate="animate"
         >
             <div className="container mx-auto flex justify-between items-center">
                 <Link href="/" className="h-8 w-auto flex gap-2 justify-start items-center p-1 rounded-md hover:bg-[rgba(225,225,225,0.05)]">
-                    <Image src="/Webrizen.png" alt="Webrizen Logo" width={500} height={500} className="h-full w-auto" />
+                    <Image src={Webrizen} placeholder="blur" alt="Webrizen Logo" width={500} height={500} className="h-full w-auto" />
                     <span>Webrizen</span>
                 </Link>
-                <motion.div
+                <div
                     className="w-full flex justify-end items-center gap-2"
                     whileHover="hover"
                 >
@@ -47,9 +37,7 @@ const Navbar = () => {
                     </Button>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <motion.div
-                                variants={variants}
-                                whileHover="hover"
+                            <div
                                 className="cursor-pointer"
                             >
                                 <Button variant="outline" size="icon">
@@ -65,7 +53,7 @@ const Navbar = () => {
                                     />
                                     <span className="sr-only">Toggle theme</span>
                                 </Button>
-                            </motion.div>
+                            </div>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
                             <DropdownMenuItem onClick={() => setTheme("light")}>
@@ -79,9 +67,9 @@ const Navbar = () => {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-                </motion.div>
+                </div>
             </div>
-        </motion.header>
+        </header>
     );
 };
 

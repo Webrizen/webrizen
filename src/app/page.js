@@ -7,6 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import HeroImg from "@/assets/images/hero-3.png";
+import ProfileImage from "@/assets/images/sidebiew.webp";
 
 const posts = [
   {
@@ -274,28 +276,32 @@ export default function Home() {
             <div className="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0 mt-8 w-max mx-auto lg:mx-0">
               <div className="flex items-center -space-x-2">
                 <Image
-                  src="/images/sidebiew.webp"
+                  src={ProfileImage}
+                  placeholder="blur"
                   height={900}
                   width={1240}
                   alt="avatar"
                   className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
                 />
                 <Image
-                  src="/images/sidebiew.webp"
+                  src={ProfileImage}
+                  placeholder="blur"
                   height={900}
                   width={1240}
                   alt="avatar"
                   className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
                 />
                 <Image
-                  src="/images/sidebiew.webp"
+                  src={ProfileImage}
+                  placeholder="blur"
                   height={900}
                   width={1240}
                   alt="avatar"
                   className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
                 />
                 <Image
-                  src="/images/sidebiew.webp"
+                  src={ProfileImage}
+                  placeholder="blur"
                   height={900}
                   width={1240}
                   alt="avatar"
@@ -327,7 +333,8 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center">
             <Image
-              src="/images/hero-3.png"
+              src={HeroImg}
+              placeholder="blur"
               width={500}
               height={500}
               alt="Hero image"
@@ -351,8 +358,10 @@ export default function Home() {
       <section className="py-16">
         <div className="container mx-auto flex flex-row gap-10 items-center flex-wrap justify-center relative z-20">
           {techStack.map((tech, index) => (
-            <img
+            <Image
               key={index}
+              width={500}
+              height={500}
               src={tech.imageUrl}
               alt={tech.name}
               className="w-[100px] object-center h-auto filter dark:invert lg:aspect-1 lg:object-contain"
