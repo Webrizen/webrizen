@@ -116,9 +116,9 @@ const services = [
 ];
 
 const stats = [
-  { id: 1, name: "Transactions every 24 hours", value: "44 million" },
-  { id: 2, name: "Assets under holding", value: "$119 trillion" },
-  { id: 3, name: "New users annually", value: "46,000" },
+  { id: 1, name: "Projects completed", value: "1500+" },
+  { id: 2, name: "Happy clients", value: "500+" },
+  { id: 3, name: "Years of experience", value: "10+" },
 ];
 
 const pricing = [
@@ -223,7 +223,8 @@ const faqs = [
       "We provide post-launch support to address any issues or changes you may have. Simply reach out to us, and we'll assist you promptly.",
   },
   {
-    question: "Do you offer maintenance services after the website is launched?",
+    question:
+      "Do you offer maintenance services after the website is launched?",
     answer:
       "Yes, we offer maintenance services to ensure your website remains up-to-date and secure. Our maintenance plans include regular updates, backups, and technical support.",
   },
@@ -535,38 +536,35 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
           <div className="max-w-3xl space-y-3">
             <h1 className="text-3xl/tight sm:text-5xl/tight font-bold text-gray-900 dark:text-white">
-              Take a look to our amazing works
+              Take a look at our amazing works
             </h1>
             <p className="text-gray-700 dark:text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente, deserunt atque.
+              Check out some of our recent projects showcasing our expertise in
+              web development and design.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             <div className="relative aspect-[5/3.8] rounded-lg overflow-hidden">
-              <Image
-                src="/images/hero-img.webp"
-                alt="project cover"
-                width={1300}
-                height={900}
+              <img
+                src="/images/spinflame-project-img.png"
+                alt="SpinFlame Project"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
-                <h1 className="font-semibold text-white text-2xl">
-                  Landing page for agency
-                </h1>
+                <h1 className="font-semibold text-white text-2xl">SpinFlame</h1>
                 <p className="text-gray-300 line-clamp-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita perferendis repudiandae similique, quae velit
-                  exercitationem veritatis ipsum natus molestias autem,
-                  laudantium,
+                  SpinFlame is a web application built for content creators to
+                  host challenges, giveaways, and interactive events using spin
+                  wheel games.
                 </p>
                 <div className="w-max">
-                  <Link
-                    href="#"
+                  <a
+                    href="https://spinflame-user-frontend.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800"
                   >
-                    View details
+                    View project
                     <span className="duration-300 ease-linear group-hover:pl-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -581,34 +579,30 @@ export default function Home() {
                         />
                       </svg>
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
             <div className="relative aspect-[5/3.8] rounded-lg overflow-hidden">
-              <Image
-                src="/images/hero-img.webp"
-                alt="project cover"
-                width={1300}
-                height={1000}
+              <img
+                src="/images/locknote-project-img.png"
+                alt="Locknote Project"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
-                <h1 className="font-semibold text-white text-2xl">
-                  Landing page for agency
-                </h1>
+                <h1 className="font-semibold text-white text-2xl">Locknote</h1>
                 <p className="text-gray-300 line-clamp-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita perferendis repudiandae similique, quae velit
-                  exercitationem veritatis ipsum natus molestias autem,
-                  laudantium,
+                  Locknote is a secure and easy way to share self-destructing
+                  notes using Next.js and Firebase.
                 </p>
                 <div className="w-max">
-                  <Link
-                    href="#"
+                  <a
+                    href="https://locknotes.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800"
                   >
-                    View details
+                    View project
                     <span className="duration-300 ease-linear group-hover:pl-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -623,7 +617,7 @@ export default function Home() {
                         />
                       </svg>
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -860,6 +854,110 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              PageSpeed Insights by Google
+            </h2>
+            <p className="mt-4 text-lg leading-6 text-gray-600 dark:text-gray-400">
+              Check out our website's performance metrics according to PageSpeed
+              Insights.
+            </p>
+          </div>
+          <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
+              <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-blue-500 dark:bg-blue-600 text-white text-4xl font-bold">
+                100
+              </div>
+              <p className="mt-6 text-lg font-medium text-gray-900 dark:text-white text-center">
+                Performance
+              </p>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
+              <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-green-500 dark:bg-green-600 text-white text-4xl font-bold">
+                97
+              </div>
+              <p className="mt-6 text-lg font-medium text-gray-900 dark:text-white text-center">
+                Accessibility
+              </p>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
+              <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-yellow-500 dark:bg-yellow-600 text-white text-4xl font-bold">
+                94
+              </div>
+              <p className="mt-6 text-lg font-medium text-gray-900 dark:text-white text-center">
+                Best Practices
+              </p>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
+              <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-purple-500 dark:bg-purple-600 text-white text-4xl font-bold">
+                95
+              </div>
+              <p className="mt-6 text-lg font-medium text-gray-900 dark:text-white text-center">
+                SEO
+              </p>
+            </div>
+          </div>
+          <div className="mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  First Contentful Paint
+                </h3>
+                <p className="text-2xl font-bold text-blue-500 dark:text-blue-600">
+                  0.3 s
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Largest Contentful Paint
+                </h3>
+                <p className="text-2xl font-bold text-blue-500 dark:text-blue-600">
+                  0.5 s
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Total Blocking Time
+                </h3>
+                <p className="text-2xl font-bold text-blue-500 dark:text-blue-600">
+                  0 ms
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Cumulative Layout Shift
+                </h3>
+                <p className="text-2xl font-bold text-blue-500 dark:text-blue-600">
+                  0
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Speed Index
+                </h3>
+                <p className="text-2xl font-bold text-blue-500 dark:text-blue-600">
+                  0.4 s
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  System
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Emulated Desktop with Lighthouse 12.0.0, Single page session, Initial page load, Custom throttling, Using HeadlessChromium 124.0.6367.118 with lr
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
@@ -938,7 +1036,11 @@ export default function Home() {
               </h1>
             </div>
             <div className="w-full">
-              <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-4 grid-cols-1">
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full grid md:grid-cols-2 gap-4 grid-cols-1"
+              >
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="md:text-xl">
