@@ -2,6 +2,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/system/Navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import Footer from "@/components/system/Footer";
 
 const dM_Sans = DM_Sans({
   weights: ['100', '200', '300', '400', '500', '600', '800', '900', '1000'],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         >
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
