@@ -384,7 +384,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="py-16">
+      <section className="py-16" id="services">
         <div className="container mx-auto">
           <div className="relative w-full">
             <h2 className="text-3xl md:text-6xl font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -960,7 +960,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-10">
+      <section className="py-10" id="faqs">
         <div className="container mx-auto relative">
           <div className="absolute right-0 top-0 left-0 mx-auto h-full w-full flex justify-center">
             <div className="w-36 h-36 overflow-hidden flex rounded-xl relative blur-2xl">

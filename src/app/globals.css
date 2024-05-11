@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 /* Custom CSS  */
 .card{
     transition: transform 0.5s ease, box-shadow 0.3s ease;
