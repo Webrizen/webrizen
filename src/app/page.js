@@ -379,7 +379,7 @@ export default function Home() {
               height={500}
               src={tech.imageUrl}
               alt={tech.name}
-              className="w-[100px] object-center h-auto filter dark:invert aspect-video lg:object-contain"
+              className="w-[100px] md:object-center object-contain h-auto filter dark:invert aspect-video lg:object-contain"
             />
           ))}
         </div>
@@ -533,8 +533,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='py-20'>
-        <h2 className="text-center md:text-5xl text-3xl mb-20 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
+      <section className='py-20 md:px-0 px-3'>
+        <h2 className="text-center md:text-5xl text-3xl md:mb-20 mb-10 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
           Trusted By People For Skills.
         </h2>
         <Slider />
@@ -557,7 +557,7 @@ export default function Home() {
                 alt="SpinFlame Project"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
+              <div className="absolute inset-0 md:backdrop-blur-0 backdrop-blur-md bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
                 <h1 className="font-semibold text-white text-2xl">SpinFlame</h1>
                 <p className="text-gray-300 line-clamp-2">
                   SpinFlame is a web application built for content creators to
@@ -596,7 +596,7 @@ export default function Home() {
                 alt="Locknote Project"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
+              <div className="absolute md:backdrop-blur-0 backdrop-blur-md inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
                 <h1 className="font-semibold text-white text-2xl">Locknote</h1>
                 <p className="text-gray-300 line-clamp-2">
                   Locknote is a secure and easy way to share self-destructing
@@ -636,9 +636,9 @@ export default function Home() {
           <h2 className="text-center text-4xl font-semibold leading-8 dark:text-slate-100 text-gray-900">
             Trusted by the world’s most innovative teams
           </h2>
-          <div className="mx-auto container mt-20 grid md:grid-cols-7 grid-cols-3 filter dark:grayscale">
+          <div className="mx-auto container mt-20 grid md:grid-cols-7 grid-cols-2 md:gap-10 gap-10 filter dark:grayscale">
             <Image
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={BeOne}
               alt="Transistor"
               width={158}
@@ -646,7 +646,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={Bemaccanada}
               alt="Reform"
               width={158}
@@ -654,7 +654,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={brighttranslations}
               alt="Tuple"
               width={158}
@@ -662,7 +662,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={emma}
               alt="SavvyCal"
               width={158}
@@ -670,7 +670,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={healthcarebiodiversity}
               alt="Statamic"
               width={158}
@@ -678,7 +678,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={codecashflow}
               alt="Statamic"
               width={158}
@@ -686,7 +686,7 @@ export default function Home() {
               height={48}
             />
             <Image
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              className="max-h-12 w-full object-contain"
               src={mycasaforte}
               alt="Statamic"
               width={158}
@@ -874,7 +874,6 @@ export default function Home() {
           </div>
           <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="relative group">
-              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
               <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-blue-500 dark:bg-blue-600 text-white text-4xl font-bold">
                 100
               </div>
@@ -883,7 +882,6 @@ export default function Home() {
               </p>
             </div>
             <div className="relative group">
-              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
               <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-green-500 dark:bg-green-600 text-white text-4xl font-bold">
                 97
               </div>
@@ -892,7 +890,6 @@ export default function Home() {
               </p>
             </div>
             <div className="relative group">
-              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
               <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-yellow-500 dark:bg-yellow-600 text-white text-4xl font-bold">
                 94
               </div>
@@ -901,7 +898,6 @@ export default function Home() {
               </p>
             </div>
             <div className="relative group">
-              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-25 rounded-full"></div>
               <div className="relative w-40 h-40 mx-auto flex items-center justify-center rounded-full bg-purple-500 dark:bg-purple-600 text-white text-4xl font-bold">
                 95
               </div>
