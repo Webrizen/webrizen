@@ -9,6 +9,19 @@ import {
 } from "@/components/ui/accordion";
 import HeroImg from "@/assets/images/hero-3.png";
 import ProfileImage from "@/assets/images/sidebiew.webp";
+import BeOne from "@/assets/images/beone.webp";
+import Bemaccanada from "@/assets/images/bimaccanada.webp";
+import brighttranslations from "@/assets/images/brighttranslations.webp";
+import codecashflow from "@/assets/images/codecashflow.webp";
+import emma from "@/assets/images/emma.webp";
+import healthcarebiodiversity from "@/assets/images/healthcarebiodiversity.webp";
+import mycasaforte from "@/assets/images/mycasaforte.webp";
+import WebDev from "@/assets/images/web-dev.png";
+import WebDesign from "@/assets/images/web-design.png";
+import WebEcommerce from "@/assets/images/web-ecommerce.png";
+import WebSeo from "@/assets/images/web-seo.png";
+import MobileDev from "@/assets/images/mobile.png";
+import Marketing from "@/assets/images/marketing.png";
 
 const posts = [
   {
@@ -68,37 +81,37 @@ const services = [
     title: "Web Design",
     description:
       "Crafting visually stunning and user-friendly websites tailored to your brand, like strategic opening moves on the digital chessboard.",
-    imageUrl: "/web-design.svg",
+    imageUrl: WebDesign,
   },
   {
     title: "Web Development",
     description:
       "Building robust and scalable web applications with cutting-edge technologies, akin to carefully planning mid-game strategies.",
-    imageUrl: "/web.svg",
+    imageUrl: WebDev,
   },
   {
     title: "E-commerce Solutions",
     description:
       "Creating seamless online shopping experiences that drive conversions, much like executing tactical maneuvers in the heat of battle.",
-    imageUrl: "/web-ecommerce.svg",
+    imageUrl: WebEcommerce,
   },
   {
     title: "SEO Optimization",
     description:
       "Strategically positioning your website to dominate search engine results, playing the long game with calculated precision.",
-    imageUrl: "/web-seo.svg",
+    imageUrl: WebSeo,
   },
   {
     title: "Mobile App Development",
     description:
       "Crafting mobile applications that move fluidly, much like a skilled player navigating the board with grace.",
-    imageUrl: "/mobile.svg",
+    imageUrl: MobileDev,
   },
   {
     title: "Digital Marketing",
     description:
       "Executing targeted campaigns that capture audience attention like a masterful checkmate, ensuring your brand emerges victorious.",
-    imageUrl: "/marketing.svg",
+    imageUrl: Marketing,
   },
 ];
 
@@ -364,7 +377,7 @@ export default function Home() {
               height={500}
               src={tech.imageUrl}
               alt={tech.name}
-              className="w-[100px] object-center h-auto filter dark:invert lg:aspect-1 lg:object-contain"
+              className="w-[100px] object-center h-auto filter dark:invert aspect-video lg:object-contain"
             />
           ))}
         </div>
@@ -388,10 +401,12 @@ export default function Home() {
                 key={index}
               >
                 <div className="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -bottom-1/2"></div>
-                <img
+                <Image
                   className="w-full h-auto object-contain border-b-4 border-[rgba(0,0,0,0.1)] dark:border-[rgba(225,225,225,0.1)]"
-                  src={service.imageUrl}
+                  src={service.imageUrl || "https://placehold.co/600x400"}
                   alt={service.title}
+                  width={600}
+                  height={400}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
@@ -620,40 +635,61 @@ export default function Home() {
           <h2 className="text-center text-4xl font-semibold leading-8 dark:text-slate-100 text-gray-900">
             Trusted by the world’s most innovative teams
           </h2>
-          <div className="mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5 filter dark:invert">
-            <img
+          <div className="mx-auto container mt-20 grid md:grid-cols-7 grid-cols-3 filter dark:grayscale">
+            <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+              src={BeOne}
               alt="Transistor"
               width={158}
+              placeholder="blur"
               height={48}
             />
-            <img
+            <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+              src={Bemaccanada}
               alt="Reform"
               width={158}
+              placeholder="blur"
               height={48}
             />
-            <img
+            <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+              src={brighttranslations}
               alt="Tuple"
               width={158}
+              placeholder="blur"
               height={48}
             />
-            <img
+            <Image
               className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+              src={emma}
               alt="SavvyCal"
               width={158}
+              placeholder="blur"
               height={48}
             />
-            <img
+            <Image
               className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+              src={healthcarebiodiversity}
               alt="Statamic"
               width={158}
+              placeholder="blur"
+              height={48}
+            />
+            <Image
+              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src={codecashflow}
+              alt="Statamic"
+              width={158}
+              placeholder="blur"
+              height={48}
+            />
+            <Image
+              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src={mycasaforte}
+              alt="Statamic"
+              width={158}
+              placeholder="blur"
               height={48}
             />
           </div>
