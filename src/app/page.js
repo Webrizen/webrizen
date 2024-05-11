@@ -280,7 +280,7 @@ export default function Home() {
                 <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
-            <h1 className="text-4xl font-bold dark:text-slate-100 text-slate-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold bg-[url('/images/text-bg.gif')] bg-center bg-cover text-transparent bg-clip-text sm:text-6xl">
               Make a move that creates a game.
             </h1>
             <p className="mt-6 text-lg leading-8 dark:text-slate-300 text-slate-600">
@@ -534,8 +534,8 @@ export default function Home() {
         </div>
       </section>
       <section className='py-20'>
-        <h2 className="text-center md:text-5xl text-3xl mb-10 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
-          Trusted By People For Our Skills.
+        <h2 className="text-center md:text-5xl text-3xl mb-20 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
+          Trusted By People For Skills.
         </h2>
         <Slider />
       </section>
