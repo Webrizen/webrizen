@@ -22,6 +22,7 @@ import WebEcommerce from "@/assets/images/web-ecommerce.png";
 import WebSeo from "@/assets/images/web-seo.png";
 import MobileDev from "@/assets/images/mobile.png";
 import Marketing from "@/assets/images/marketing.png";
+import Slider from "@/components/system/Slider";
 
 const posts = [
   {
@@ -532,6 +533,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className='py-20'>
+        <h2 className="text-center md:text-5xl text-3xl mb-10 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
+          Trusted By People For Our Skills.
+        </h2>
+        <Slider />
+      </section>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
           <div className="max-w-3xl space-y-3">
@@ -957,7 +964,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
