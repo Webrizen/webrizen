@@ -5,14 +5,88 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import Footer from "@/components/system/Footer";
 
 const dM_Sans = DM_Sans({
-  weights: ['100', '200', '300', '400', '500', '600', '800', '900', '1000'],
-  subsets: ['latin']
-})
+  weights: ["100", "200", "300", "400", "500", "600", "800", "900", "1000"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
-  title: "Web Development Agency | Webrizen - Falakata, West Bengal, India",
-  description: "Webrizen, a leading web development agency in Falakata, West Bengal, India. Crafting stunning websites for global clients. Expertise in responsive design, e-commerce, and custom solutions.",
-  keywords: "Web development, website design, responsive design, e-commerce solutions, custom web development, Webrizen, Falakata, West Bengal, India, global services."
+  title: {
+    default: "Web Development Agency | Webrizen - Falakata, West Bengal, India",
+    template:
+      "%s | Web Development Agency | Webrizen - Falakata, West Bengal, India",
+  },
+  description: {
+    default:
+      "Webrizen, a leading web development agency in Falakata, West Bengal, India. Crafting stunning websites for global clients. Expertise in responsive design, e-commerce, and custom solutions.",
+    template:
+      "%s | Web Development Agency | Webrizen - Falakata, West Bengal, India",
+  },
+  applicationName: "Webrizen",
+  generator: "Webrizen",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Web development",
+    "website design",
+    "responsive design",
+    "e-commerce solutions",
+    "custom web development",
+    "Webrizen",
+    "Falakata, West Bengal",
+    "India",
+    "global services.",
+  ],
+  authors: [
+    {
+      name: "Arshahdul Ahmed",
+      url: "https://webrizen.com",
+    },
+  ],
+  publisher: "Arshahdul Ahmed",
+  metadataBase: new URL("https://webrizen.com"),
+  openGraph: {
+    title: "Webrizen",
+    description:
+      "Webrizen, a leading web development agency in Falakata, West Bengal, India. Crafting stunning websites for global clients. Expertise in responsive design, e-commerce, and custom solutions.",
+    url: "https://webrizen.com",
+    siteName: "Webrizen",
+    images: [
+      {
+        url: "https://webrizen.com/logo.webp",
+        width: 500,
+        height: 500,
+        alt: "Webrizen",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/logo.webp",
+    },
+  },
+  manifest: "https://webrizen.com/manifest.json",
+  twitter: {
+    card: "summary_large_image",
+    title: "Webrizen",
+    description:
+      "Webrizen, a leading web development agency in Falakata, West Bengal, India. Crafting stunning websites for global clients. Expertise in responsive design, e-commerce, and custom solutions.",
+    creator: "@Arshahdul_ahmed",
+    images: ["https://webrizen.com/logo.webp"],
+  },
+  verification: {
+    google: "google",
+    yandex: "yandex",
+    yahoo: "yahoo",
+    other: {
+      me: ["support@webrizen.com", "webrizen.com", "webrizen@gmail.com"],
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({ children }) {
