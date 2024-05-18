@@ -5,6 +5,11 @@ import DateFormatter from "@/components/system/DateFormater";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Blogs',
+  description: `Stay updated with Webrizen's blog! Discover the latest trends, tips, and insights in web design, development, mobile solutions, and digital marketing. Empower your projects with expert advice and innovative strategies from our experienced team.`,
+}
+
 const page = async () => {
   const posts = await fetchPosts();
   return (

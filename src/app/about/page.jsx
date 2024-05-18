@@ -1,6 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'About',
+  description: `Truth? A powerful but double-edge sward! use it wisely - Know about Webrizen, it's creator and history.`,
+}
+
 export default function page() {
   return (
     <>

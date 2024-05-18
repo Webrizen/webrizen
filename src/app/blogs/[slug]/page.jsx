@@ -1,12 +1,25 @@
 import { fetchSinglePost } from "@/utils/fetchSinglePost";
 import GetImage from "@/components/system/GetImage";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import CustomDateFormatter from "@/components/system/CustomDateFormatter";
-import BlogBodyRenderer from "@/components/system/BlogBodyRenderer";
 import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
+
+export async function generateMetadata({ params }, parent) {
+  const post = await fetchSinglePost(params.slug);
+  return {
+    title: post.title,
+    description: post.description,
+    authors: [
+      {
+        name: post.author.name,
+        url: "https://webrizen.com",
+      },
+    ],
+    publisher: "Webrizen",
+    category: post.categories.map(category => category.title),
+  };
+}
 
 function TagIcon(props) {
   return (
@@ -33,42 +46,57 @@ function urlFor(source) {
 }
 
 const ptComponents = {
-    types: {
-      image: ({ value }) => {
-        if (!value?.asset?._ref) {
-          return null;
-        }
-        return (
-          <img
-            alt={value.alt || " "}
-            loading="lazy"
-            src={urlFor(value).width(320).height(240).fit("max").auto("format")}
-            className="my-4"
-          />
-        );
-      },
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null;
+      }
+      return (
+        <img
+          alt={value.alt || " "}
+          loading="lazy"
+          src={urlFor(value).width(320).height(240).fit("max").auto("format")}
+          className="my-4"
+        />
+      );
     },
-    block: {
-      h1: ({ children }) => <h1 className="text-3xl font-bold my-4">{children}</h1>,
-      h2: ({ children }) => <h2 className="text-2xl font-bold my-4">{children}</h2>,
-      h3: ({ children }) => <h3 className="text-xl font-semibold my-4">{children}</h3>,
-      h4: ({ children }) => <h4 className="text-lg font-semibold my-4">{children}</h4>,
-      normal: ({ children }) => <p className="my-2">{children}</p>,
-      blockquote: ({ children }) => <blockquote className="border-l-4 border-gray-400 pl-4 italic my-4">{children}</blockquote>,
-    },
-    list: {
-      bullet: ({ children }) => <ul className="list-disc ml-8 my-4">{children}</ul>,
-      number: ({ children }) => <ol className="list-decimal ml-8 my-4">{children}</ol>,
-    },
-    listItem: {
-      bullet: ({ children }) => <li className="my-2">{children}</li>,
-      number: ({ children }) => <li className="my-2">{children}</li>,
-    },
-  };
+  },
+  block: {
+    h1: ({ children }) => (
+      <h1 className="text-3xl font-bold my-4">{children}</h1>
+    ),
+    h2: ({ children }) => (
+      <h2 className="text-2xl font-bold my-4">{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="text-xl font-semibold my-4">{children}</h3>
+    ),
+    h4: ({ children }) => (
+      <h4 className="text-lg font-semibold my-4">{children}</h4>
+    ),
+    normal: ({ children }) => <p className="my-2">{children}</p>,
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-4 border-gray-400 pl-4 italic my-4">
+        {children}
+      </blockquote>
+    ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc ml-8 my-4">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal ml-8 my-4">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li className="my-2">{children}</li>,
+    number: ({ children }) => <li className="my-2">{children}</li>,
+  },
+};
 
 export default async function Page({ params }) {
   const post = await fetchSinglePost(params.slug);
-  console.log(post);
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <div className="relative w-full">
@@ -111,7 +139,7 @@ export default async function Page({ params }) {
       <main className="flex-1">
         <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 md:px-6 md:py-16 lg:grid-cols-[1fr_300px] lg:gap-12 lg:px-8 lg:py-20">
           <article className="w-full prose prose-lg">
-          <PortableText value={post.body} components={ptComponents} />
+            <PortableText value={post.body} components={ptComponents} />
           </article>
           <div className="space-y-6">
             <div className="rounded-md border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-950">
