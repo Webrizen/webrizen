@@ -1,71 +1,14 @@
+import React from "react";
+import { fetchPosts, query } from "@/utils/fetchPosts";
+import GetImage from "@/components/system/GetImage";
+import DateFormatter from "@/components/system/DateFormater";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogCard = ({ cover, published_at, title, sumary }) => {
-  return (
-    <Link
-      href="#"
-      className="flex p-px flex-col bg-gray-100 dark:bg-gray-900 group border border-gray-200 dark:border-gray-800 rounded-lg"
-    >
-      <div className="flex rounded-[7px] bg-gray-300 dark:bg-gray-700">
-        <Image
-          width={1000}
-          height={600}
-          src={cover}
-          className="rounded-[7px] aspect-[4/2.8] w-full object-cover"
-          alt="image article"
-        />
-      </div>
-      <div className="flex flex-col p-5 relative space-y-4">
-        <h1 className="text-xl/tight font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-500">
-          {title}
-        </h1>
-        <p className="text-gray-700 dark:text-gray-300 line-clamp-2">
-          {sumary}
-        </p>
-        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-            />
-          </svg>
-          <span>{published_at}</span>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-const posts = [
-  {
-    id: 1,
-    cover: "/images/hero-img.webp",
-    published_at: "Jun, 12, 2021",
-    title: "How to Sructure your reactJs Application like a Legend ",
-    sumary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error magni ipsam earum ",
-  },
-  {
-    id: 2,
-    cover: "/images/hero-img.webp",
-    published_at: "Jun, 12, 2021",
-    title: "You're probably fetching data in the wrong way",
-    sumary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error magni ipsam earum ",
-  },
-];
-
-const page = () => {
+const page = async () => {
+  const posts = await fetchPosts();
+  console.log(posts);
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-14">
@@ -80,8 +23,38 @@ const page = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-t-lg">
-          {posts.map((post) => (
-            <BlogCard key={post.id} {...post} />
+          {posts.map((post, index) => (
+            <Link
+              href={`/blogs/${post.slug.current}`}
+              key={index}
+              className="flex p-px flex-col bg-gray-100 dark:bg-gray-900 group border border-gray-200 dark:border-gray-800 rounded-lg"
+            >
+              <div className="flex rounded-[7px] bg-gray-300 dark:bg-gray-700">
+                <div className="w-full h-full rounded-lg border border-slate-300 overflow-hidden">
+                  <GetImage
+                    source={post.mainImage.asset._ref}
+                    title={post.title}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col p-5 relative space-y-4">
+                <div className="flex flex-row gap-2 text-xs justify-start items-center dark:text-slate-400 text-slate-600">
+                  <span>{post.categories[0].title}</span>
+                  <span>·</span>
+                  <span>
+                    <DateFormatter serverDate={post.publishedAt} />
+                  </span>
+                  <span>·</span>
+                  <span>by {post.author.name}</span>
+                </div>
+                <h1 className="text-xl/tight font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-500">
+                  {post.title}
+                </h1>
+                <p className="text-gray-700 dark:text-gray-300 line-clamp-2">
+                  {post.description}
+                </p>
+              </div>
+            </Link>
           ))}
           <div className="sm:col-span-2 lg:col-span-1 p-6 sm:p-10 md:p-14 lg:p-8 rounded-lg bg-gray-100 dark:bg-gray-900 flex flex-col space-y-6 relative">
             <div className="absolute w-14 h-14 rounded-full bg-gradient-to-bl from-blue-600 to-violet-500 blur-2xl z-10 -top-7 -left-7 opacity-40"></div>
