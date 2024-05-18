@@ -17,8 +17,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={dM_Sans.className}>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+      <body className={`!overflow-y-auto ${dM_Sans.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

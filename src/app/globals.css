@@ -4,6 +4,7 @@
 
 *{
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 /* Custom CSS  */
@@ -26,7 +27,7 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   .main {
@@ -35,7 +36,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 5em;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   .antenna {

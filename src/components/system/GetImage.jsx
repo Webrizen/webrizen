@@ -3,7 +3,7 @@ import React from "react";
 import { client } from "@/utils/sanity.client";
 import imageUrlBuilder from "@sanity/image-url";
 
-export default function GetImage({ source, title }) {
+export default function GetImage({ source, title, ...props }) {
   const builder = imageUrlBuilder(client);
   function urlFor(srcmain) {
     return builder.image(srcmain);
@@ -11,9 +11,9 @@ export default function GetImage({ source, title }) {
   return (
     <>
       <img
+        {...props}
         src={urlFor(source) || "https://placehold.co/600x400"}
         alt={title}
-        className="aspect-[4/2.8] w-full object-cover"
       />
     </>
   );

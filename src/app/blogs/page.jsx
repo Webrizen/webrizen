@@ -3,12 +3,10 @@ import { fetchPosts, query } from "@/utils/fetchPosts";
 import GetImage from "@/components/system/GetImage";
 import DateFormatter from "@/components/system/DateFormater";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 const page = async () => {
   const posts = await fetchPosts();
-  console.log(posts);
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-14">
@@ -34,6 +32,7 @@ const page = async () => {
                   <GetImage
                     source={post.mainImage.asset._ref}
                     title={post.title}
+                    className="w-full object-contain"
                   />
                 </div>
               </div>
