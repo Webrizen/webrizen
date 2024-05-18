@@ -24,56 +24,69 @@ import MobileDev from "@/assets/images/mobile.png";
 import Marketing from "@/assets/images/marketing.png";
 import Slider from "@/components/system/Slider";
 
-const posts = [
+const metrics = [
   {
     id: 1,
-    title: "Boost your conversion rate",
-    href: "#",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+        />
+      </svg>
+    ),
+    stat: "4.7 Stars",
+    title: "43 Reviews",
   },
   {
     id: 2,
-    title: "The Power of Responsive Web Design",
-    href: "#",
-    description:
-      "In today's digital landscape, responsiveness isn't just a feature; it's a necessity. Learn how responsive web design can elevate your online presence and enhance user experience.",
-    date: "May 10, 2024",
-    datetime: "2024-05-10",
-    category: { title: "Web Design", href: "#" },
-    author: {
-      name: "Jessica Bennett",
-      role: "Lead Web Designer",
-      href: "#",
-      imageUrl: "https://placehold.co/500x500",
-    },
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+        />
+      </svg>
+    ),
+    stat: "24min",
+    title: "Avg. response rate",
   },
   {
     id: 3,
-    title: "Strategic SEO Techniques for Digital Success",
-    href: "#",
-    description:
-      "Unravel the mystery behind effective SEO strategies. From keyword research to on-page optimization, discover the tactics that can propel your website to the top of search engine rankings.",
-    date: "April 5, 2024",
-    datetime: "2024-04-05",
-    category: { title: "SEO", href: "#" },
-    author: {
-      name: "David Peterson",
-      role: "SEO Specialist",
-      href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
+        />
+      </svg>
+    ),
+    stat: "+ 1k",
+    title: "Clients",
   },
 ];
 
@@ -272,7 +285,7 @@ export default function Home() {
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8">
               where every move is strategic, every design a masterstroke.{" "}
               <Link
-                href="#"
+                href="/blogs"
                 className="font-semibold dark:text-indigo-300 text-indigo-600"
               >
                 <span className="absolute inset-0" aria-hidden="true"></span>
@@ -288,58 +301,35 @@ export default function Home() {
               planning on a chessboard. Our team, adept at every move, crafts
               solutions that anticipate your opponent's every move.
             </p>
-            <div className="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0 mt-8 w-max mx-auto lg:mx-0">
-              <div className="flex items-center -space-x-2">
-                <Image
-                  src={ProfileImage}
-                  placeholder="blur"
-                  height={900}
-                  width={1240}
-                  alt="avatar"
-                  className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
-                />
-                <Image
-                  src={ProfileImage}
-                  placeholder="blur"
-                  height={900}
-                  width={1240}
-                  alt="avatar"
-                  className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
-                />
-                <Image
-                  src={ProfileImage}
-                  placeholder="blur"
-                  height={900}
-                  width={1240}
-                  alt="avatar"
-                  className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
-                />
-                <Image
-                  src={ProfileImage}
-                  placeholder="blur"
-                  height={900}
-                  width={1240}
-                  alt="avatar"
-                  className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 object-cover"
-                />
-                <span className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-slate-950 bg-slate-200 dark:bg-slate-800 text-xs text-slate-700 dark:text-slate-300 flex items-center justify-center">
-                  50+
-                </span>
-              </div>
-              <span className="pl-2 text-slate-600 dark:text-slate-200">
-                {" "}
-                Trusted Developers{" "}
-              </span>
+            <div className="max-w-[90%] mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
+              {metrics.map((metric) => (
+                <div
+                  key={metric.id}
+                  className="flex items-center gap-x-4 py-4 sm:py-0"
+                >
+                  <span className="w-10 h-10 text-white bg-gradient-to-br from-indigo-700 to-slate-950 rounded-md flex items-center justify-center">
+                    {metric.icon}
+                  </span>
+                  <div className="flex-1 flex flex-col text-lg">
+                    <h4 className=" text-gray-700 dark:text-gray-300 font-semibold">
+                      {metric.stat}
+                    </h4>
+                    <span className="text-xs text-gray-400">
+                      {metric.title}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
             <div className="flex md:justify-start whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4">
               <Link
-                href="#"
+                href="/request-developers"
                 className="flex items-center h-12 px-6 bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded-full  hover:backdrop-blur-lg"
               >
                 Hire us Now
               </Link>
               <Link
-                href="#"
+                href="/about"
                 className="flex items-center h-12 px-6 rounded-full bg-slate-100 dark:bg-slate-900 text-purple-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800"
               >
                 Learn more
@@ -533,7 +523,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='py-20 md:px-0 px-3'>
+      <section className="py-20 md:px-0 px-3">
         <h2 className="text-center md:text-5xl text-3xl md:mb-20 mb-10 font-bold md:leading-8 dark:text-slate-100 text-gray-900">
           Trusted By People For Skills.
         </h2>
@@ -953,7 +943,9 @@ export default function Home() {
                   System
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Emulated Desktop with Lighthouse 12.0.0, Single page session, Initial page load, Custom throttling, Using HeadlessChromium 124.0.6367.118 with lr
+                  Emulated Desktop with Lighthouse 12.0.0, Single page session,
+                  Initial page load, Custom throttling, Using HeadlessChromium
+                  124.0.6367.118 with lr
                 </p>
               </div>
             </div>

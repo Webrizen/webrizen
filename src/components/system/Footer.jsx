@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Webrizen from "@/assets/Webrizen.png";
+import { Button } from "../ui/button";
 
 const FooterItem = ({ text, link }) => {
   return (
@@ -39,22 +40,22 @@ const footerBlocks = [
       {
         id: 1,
         text: "Web Design",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 2,
         text: "Web Development",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 3,
         text: "Mobile App Development",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 4,
         text: "UI/UX Design",
-        link: "#services",
+        link: "/#services",
       },
     ],
   },
@@ -65,22 +66,22 @@ const footerBlocks = [
       {
         id: 1,
         text: "SEO Optimization",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 2,
         text: "Graphic Design",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 3,
         text: "Content Writing",
-        link: "#services",
+        link: "/#services",
       },
       {
         id: 4,
         text: "E-commerce Solutions",
-        link: "#services",
+        link: "/#services",
       },
     ],
   },
@@ -171,13 +172,13 @@ export default function Footer() {
               </p>
               <div className="flex md:justify-center whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4">
                 <Link
-                  href="#"
+                  href="/request-developers"
                   className="flex items-center h-12 px-6 bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded-full  hover:backdrop-blur-lg"
                 >
                   Hire us Now
                 </Link>
                 <Link
-                  href="#"
+                  href="/about"
                   className="flex items-center h-12 px-6 rounded-full bg-slate-100 dark:bg-slate-900 text-purple-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800"
                 >
                   Learn more
@@ -240,7 +241,11 @@ export default function Footer() {
                   <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                 </svg>
               </a>
-              <a href="#" aria-label="social link" rel="noreferer">
+              <a
+                href="https://github.com/Webrizen"
+                aria-label="social link"
+                rel="noreferer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -264,11 +269,15 @@ export default function Footer() {
               <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                 Join our news-letter
               </h2>
-              <p>We provide latest news, tools and many more cool stuff weekly via our newsletter, make sure to Subscribe. It's free!</p>
+              <p>
+                We provide latest news, tools and many more cool stuff weekly
+                via our newsletter, make sure to Subscribe. It's free!
+              </p>
             </div>
             <div className="flex-1 max-w-md">
               <form
-                action="#"
+                action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
+                method="POST"
                 className="w-full flex flex-col sm:flex-row gap-3"
               >
                 <input
@@ -276,7 +285,7 @@ export default function Footer() {
                   placeholder="johndoe@gmail.com"
                   className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200 dark:bg-gray-800"
                 />
-                <button className="outline-none w-full py-2.5 px-5 sm:w-max bg-indigo-600 text-white rounded-md flex items-center justify-center">
+                <button className="outline-none w-full py-2.5 px-5 sm:w-max bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white hover:backdrop-blur-lg flex items-center justify-center rounded-md">
                   Subscribe
                 </button>
               </form>

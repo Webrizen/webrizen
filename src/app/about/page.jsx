@@ -25,11 +25,11 @@ export default function page() {
       </div>
       <div className="hidden bg-muted lg:block">
         <img
-          src="https://placehold.co/500x500"
+          src="/profile.png"
           alt="Image"
           width="1920"
           height="1080"
-          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale rounded-bl-2xl filter blur-xl hover:blur-none"
         />
       </div>
     </div> 
