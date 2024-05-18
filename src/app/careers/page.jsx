@@ -51,6 +51,13 @@ const jobs = [
   },
 ];
 
+export const metadata = {
+  title: 'Join Our Team - Careers at Webrizen',
+  description: 'Explore exciting career opportunities at Webrizen and join our dynamic team of professionals. We are hiring talented individuals who are passionate about technology and innovation.',
+  publisher: 'Webrizen',
+  category: 'Careers',
+};
+
 export default function page() {
   return (
     <>

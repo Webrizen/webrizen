@@ -10,6 +10,19 @@ import {
   Twitter,
 } from "lucide-react";
 
+export const metadata = {
+  title: 'Contact Us - Get in Touch with Webrizen',
+  description: 'Have questions or inquiries? Contact Webrizen to learn more about our services, request a quote, or discuss potential collaborations. Our team is here to assist you!',
+  authors: [
+    {
+      name: 'Webrizen Team',
+      url: 'https://webrizen.com',
+    },
+  ],
+  publisher: 'Webrizen',
+};
+
+
 const Page = () => {
   return (
     <section className="md:container mx-auto md:p-14 p-4">

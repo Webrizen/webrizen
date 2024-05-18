@@ -1,5 +1,11 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Terms and Conditions - Webrizen',
+  description: 'Read Webrizen\'s Terms and Conditions to understand the rules and guidelines for using our website and services. By accessing or using our website, you agree to comply with these terms.',
+};
+
+
 export default function page() {
   return (
     <>

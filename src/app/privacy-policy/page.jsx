@@ -1,5 +1,11 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Privacy Policy - Webrizen',
+  description: 'Learn about how Webrizen collects, uses, and protects your personal information with our Privacy Policy. We are committed to ensuring the privacy and security of your data.',
+};
+
+
 export default function page() {
   return (
     <>

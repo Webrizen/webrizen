@@ -1,5 +1,11 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Page Not Found - Webrizen',
+  description: 'Oops! The page you are looking for could not be found. It may have been removed, renamed, or temporarily unavailable. Please check the URL or navigate back to our homepage.',
+};
+
+
 export default function Notfound() {
   return (
     <div className="main_wrapper">
