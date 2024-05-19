@@ -281,6 +281,16 @@ export default function Footer() {
                 className="w-full flex flex-col sm:flex-row gap-3"
               >
                 <input
+                  type="hidden"
+                  name="_next"
+                  value="https://webrizen.vercal.app/thanks"
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Newslatter Subscriber - New Request ✨"
+                />
+                <input
                   type="email"
                   placeholder="johndoe@gmail.com"
                   className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200 dark:bg-gray-800"

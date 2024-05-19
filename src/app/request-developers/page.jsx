@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Checkbox,
@@ -23,7 +24,13 @@ export default function RequestDevelopersPage() {
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none">
-          <form className="space-y-6">
+          <form
+            className="space-y-6"
+            action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
+            method="POST"
+          >
+          <input type="hidden" name="_next" value="https://webrizen.vercal.app/thanks" />
+          <input type="hidden" name="_subject" value="Request Developers - New Request ✨" />
             <Input
               className="w-full"
               variant="underlined"
@@ -31,6 +38,7 @@ export default function RequestDevelopersPage() {
               clearable
               label="Project Title"
               placeholder="Enter the project title"
+              name="projectTitle"
             />
             <Textarea
               variant="underlined"
@@ -39,6 +47,7 @@ export default function RequestDevelopersPage() {
               label="Project Description"
               placeholder="Describe your project"
               maxLength={5000}
+              name="projectDescription"
             />
             <Select
               label="Budget"
@@ -46,6 +55,7 @@ export default function RequestDevelopersPage() {
               variant="underlined"
               fullWidth
               placeholder="Select your budget range"
+              name="budget"
             >
               <SelectItem value="500-1000">$500 - $1,000</SelectItem>
               <SelectItem value="1000-5000">$1,000 - $5,000</SelectItem>
@@ -60,6 +70,7 @@ export default function RequestDevelopersPage() {
               clearable
               label="Skills Needed"
               placeholder="List required skills"
+              name="skillsNeeded"
             />
             <Input
               className="w-full"
@@ -68,6 +79,7 @@ export default function RequestDevelopersPage() {
               clearable
               label="Reference (Optional)"
               placeholder="Provide any reference links"
+              name="reference"
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <Input
@@ -77,6 +89,7 @@ export default function RequestDevelopersPage() {
                 clearable
                 label="Company"
                 placeholder="Enter your company name"
+                name="company"
               />
               <Input
                 className="w-full"
@@ -86,6 +99,7 @@ export default function RequestDevelopersPage() {
                 label="Contact Email"
                 type="email"
                 placeholder="Enter your email address"
+                name="contactEmail"
               />
             </div>
             <Input
@@ -96,6 +110,7 @@ export default function RequestDevelopersPage() {
               label="Contact Phone (Optional)"
               type="tel"
               placeholder="Enter your phone number"
+              name="contactPhone"
             />
             <Textarea
               className="w-full"
@@ -103,13 +118,18 @@ export default function RequestDevelopersPage() {
               fullWidth
               label="Questions to Agency"
               placeholder="Ask any questions to our agency"
-              maxLength={500}
+              maxLength={1500}
+              name="questionsToAgency"
             />
             <div className="flex justify-start">
-              <Checkbox>Subscribe to our newsletter</Checkbox>
+              <Checkbox name="subscribe">Subscribe to our newsletter</Checkbox>
             </div>
             <div className="flex justify-start">
-              <Button auto className="w-full sm:w-auto" color="primary">
+              <Button
+                auto
+                className="w-full sm:w-auto bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded hover:backdrop-blur-lg"
+                type="submit"
+              >
                 Submit Request
               </Button>
             </div>
