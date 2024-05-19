@@ -1,5 +1,15 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Free Online Tools | Your Website Enhancement Suite",
+  description:
+    "Explore our collection of free online tools designed to elevate your website's functionality and user experience. From converting YouTube videos to MP3, downloading Instagram posts, to generating color palettes and calculating EMI, we have everything you need to enhance your online presence.",
+    openGraph: {
+      title: "Free Online Tools | Your Website Enhancement Suite",
+      description: "Explore our collection of free online tools designed to elevate your website's functionality and user experience. From converting YouTube videos to MP3, downloading Instagram posts, to generating color palettes and calculating EMI, we have everything you need to enhance your online presence.",
+    },
+};
+
 const FeatureItem = ({ title, description, slug }) => {
   return (
     <div className="space-y-4 bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] hover:backdrop-blur-xl transition-all p-4 h-full rounded">
