@@ -119,12 +119,12 @@ const page = () => {
     <section className="py-20 bg-[url('/bg-steps.svg')] bg-right-top bg-cover bg-no-repeat">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="flex flex-col gap-5">
-          <div className="space-y-4 max-w-xl">
+          <div className="space-y-4 max-w-6xl">
             <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-sky-800 dark:text-gray-100">
               Free Tools
             </span>
-            <h1 className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">
-              Empower Your Website with Our Suite of Free Online Tools
+            <h1 className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-6xl leading-tight">
+            Streamline your workflow, boost productivity, and simplify your daily tasks.
             </h1>
           </div>
           <p className="text-gray-700 dark:text-gray-300">
