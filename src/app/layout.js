@@ -79,7 +79,7 @@ export const metadata = {
     images: ["https://webrizen.com/logo.webp"],
   },
   verification: {
-    google: "google",
+    google: "ybDMkxh5rgTRuJgifNQE1gHV_n7OW1Wa_NGFbnanSp8",
     yandex: "yandex",
     yahoo: "yahoo",
     other: {
