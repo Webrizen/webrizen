@@ -20,9 +20,7 @@ const page = async () => {
             Our most recent Articles
           </h1>
           <p className="text-gray-700 dark:text-gray-300">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-            perferendis eos amet eum repudiandae aspernatur mollitia quos
-            consectetur voluptatibus pariatur
+          Stay updated with the latest trends, insights, and tips from industry experts. Our articles cover a wide range of topics to help you stay ahead in the digital world.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-t-lg">
@@ -72,8 +70,7 @@ const page = async () => {
                 developers
               </h1>
               <p className="text-gray-700 dark:text-gray-300 text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Laudantium, rem eius dicta
+              Subscribe to our newsletter and get the latest articles delivered straight to your inbox. Stay informed and inspired with our curated content.
               </p>
               <form
                 action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
