@@ -49,6 +49,13 @@ const features = [
       "Easily convert YouTube videos to MP3 audio files for offline listening.",
     slug: "youtube-to-mp3-converter",
   },
+  {
+    id: 2,
+    title: "Tailwind Gradient Background Animation Generator",
+    description:
+      "Create stunning gradient background animations with Tailwind CSS and customize them easily.",
+    slug: "tailwind-gradient-background-animation-generator",
+  },
 ];
 
 const page = () => {
