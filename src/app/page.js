@@ -7,8 +7,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 import HeroImg from "@/assets/images/hero-3.png";
-import ProfileImage from "@/assets/images/sidebiew.webp";
+import AnimatedGridPattern from "@/components/system/animated-grid-pattern";
 import BeOne from "@/assets/images/beone.webp";
 import Bemaccanada from "@/assets/images/bimaccanada.webp";
 import brighttranslations from "@/assets/images/brighttranslations.webp";
@@ -267,7 +268,17 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <section className="relative isolate bg-[url('/bg.svg')] bg-center bg-cover bg-no-repeat px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center overflow-hidden">
+      <section className="relative isolate px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center overflow-hidden">
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.5}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+          )}
+        />
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -301,7 +312,7 @@ export default function Home() {
               planning on a chessboard. Our team, adept at every move, crafts
               solutions that anticipate your opponent's every move.
             </p>
-            <div className="md:max-w-[90%] max-w-full mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
+            <div className="md:max-w-[90%] backdrop-blur-3xl max-w-full mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
               {metrics.map((metric) => (
                 <div
                   key={metric.id}
@@ -620,42 +631,54 @@ export default function Home() {
             </div>
           </div>
           <div className="relative aspect-[5/1.7] rounded-lg overflow-hidden">
-              <img
-                src="/images/miragelancer.png"
-                alt="Miragelancer Project"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute md:backdrop-blur-0 backdrop-blur-md inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
-                <h1 className="font-semibold text-white text-2xl">Miragelancer</h1>
-                <p className="text-gray-300 line-clamp-2">
-                An innovative freelancing platform designed to connect developers with clients seeking high-quality tech talent. The platform leverages advanced AI capabilities to enhance matching and recommendation processes, providing a seamless and efficient experience for both freelancers and clients. Users can sign up using either traditional email/password authentication or Google OAuth, and are required to verify their email to ensure security and authenticity. Freelancers can showcase their skills, manage their portfolio, and receive feedback from clients, while clients can easily find and hire the best talent for their projects.
-                </p>
-                <div className="w-max">
-                  <a
-                    href="https://miragelancer.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800"
-                  >
-                    View project
-                    <span className="duration-300 ease-linear group-hover:pl-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        className="w-5 h-5"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
+            <img
+              src="/images/miragelancer.png"
+              alt="Miragelancer Project"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute md:backdrop-blur-0 backdrop-blur-md inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
+              <h1 className="font-semibold text-white text-2xl">
+                Miragelancer
+              </h1>
+              <p className="text-gray-300 line-clamp-2">
+                An innovative freelancing platform designed to connect
+                developers with clients seeking high-quality tech talent. The
+                platform leverages advanced AI capabilities to enhance matching
+                and recommendation processes, providing a seamless and efficient
+                experience for both freelancers and clients. Users can sign up
+                using either traditional email/password authentication or Google
+                OAuth, and are required to verify their email to ensure security
+                and authenticity. Freelancers can showcase their skills, manage
+                their portfolio, and receive feedback from clients, while
+                clients can easily find and hire the best talent for their
+                projects.
+              </p>
+              <div className="w-max">
+                <a
+                  href="https://miragelancer.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800"
+                >
+                  View project
+                  <span className="duration-300 ease-linear group-hover:pl-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
+          </div>
         </div>
       </section>
       <section className="py-16">

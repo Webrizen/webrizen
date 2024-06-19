@@ -37,7 +37,7 @@ const GradientAnimationGenerator = () => {
   </p>
 </GradientAnimationContainer>`;
 
-const exampleContainerCode = `<GradientAnimationContainer
+  const exampleContainerCode = `<GradientAnimationContainer
          direction="top-to-bottom"
          speed="fast"
          movement="sliding"
@@ -161,6 +161,10 @@ export default GradientAnimationContainer;
                   <SelectItem value="right-to-left">Right to Left</SelectItem>
                   <SelectItem value="top-to-bottom">Top to Bottom</SelectItem>
                   <SelectItem value="bottom-to-top">Bottom to Top</SelectItem>
+                  <SelectItem value="diagonal">Diagonal</SelectItem>
+                  <SelectItem value="moving-gradient">
+                    Moving Gradient
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -195,6 +199,9 @@ export default GradientAnimationContainer;
                   <SelectItem value="static">Static</SelectItem>
                   <SelectItem value="sliding">Sliding</SelectItem>
                   <SelectItem value="pulsing">Pulsing</SelectItem>
+                  <SelectItem value="circular">Circular</SelectItem>
+                  <SelectItem value="zigzag">Zigzag</SelectItem>
+                  <SelectItem value="water">Wave</SelectItem>
                 </SelectContent>
               </Select>
             </div>

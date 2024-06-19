@@ -18,6 +18,9 @@ const GradientAnimationContainer = ({
     "right-to-left": "to left",
     "top-to-bottom": "to bottom",
     "bottom-to-top": "to top",
+    "diagonal": "to bottom-right",
+    "checkerboard": "to bottom right",
+    "moving-gradient": "to right"
   };
 
   const speedDurations = {
@@ -26,20 +29,22 @@ const GradientAnimationContainer = ({
     fast: 2,
   };
 
+  const gradientEffect = {
+    linear: `linear-gradient(${directionClasses[direction] || "to right"}, ${color1}, ${color2}, ${color3}, ${color4})`,
+    radial: `radial-gradient(circle, ${color1}, ${color2}, ${color3})`,
+    conic: `conic-gradient(from ${color1} at 0%, ${color2} at 50%, ${color3} at 100%)`,
+    diagonal: `linear-gradient(to bottom right, ${color1}, ${color2}, ${color3}, ${color4})`,
+    checkerboard: `linear-gradient(to bottom right, ${color1} 50%, ${color2} 50%)`,
+    "moving-gradient": `linear-gradient(to right, ${color1}, ${color2}, ${color3}, ${color4})`
+  };
+
   const animationClass = {
     static: "",
     sliding: "bg-[length:200%_200%] animate-slide",
     pulsing: "animate-pulse",
-  };
-
-  // Determine the correct direction class based on the direction prop
-  const gradientDirection = directionClasses[direction] || "to right";
-
-  // Determine the correct gradient effect based on the effect prop
-  const gradientEffect = {
-    linear: `linear-gradient(${gradientDirection}, ${color1}, ${color2}, ${color3}, ${color4})`,
-    radial: `radial-gradient(${color1}, ${color2}, ${color3})`,
-    conic: `conic-gradient(from ${color1} at 0%, ${color2} at 50%, ${color3} at 100%)`,
+    circular: "animate-rotate",
+    zigzag: "animate-zigzag",
+    water: "animate-wave",
   };
 
   // Inline styles for gradient background
