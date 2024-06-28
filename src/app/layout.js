@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/system/Navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Footer from "@/components/system/Footer";
+import { ClerkProvider } from '@clerk/nextjs';
 
 const dM_Sans = DM_Sans({
   weights: ["100", "200", "300", "400", "500", "600", "800", "900", "1000"],
@@ -91,6 +92,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`!overflow-y-auto ${dM_Sans.className}`}>
         <ThemeProvider
@@ -105,5 +107,6 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }

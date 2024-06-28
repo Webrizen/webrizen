@@ -20,6 +20,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Webrizen from "@/assets/Webrizen.png";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const { setTheme, theme } = useTheme();
@@ -151,6 +152,7 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <UserButton />
           <button
             className="inline-flex w-10 h-10 justify-center items-center hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
