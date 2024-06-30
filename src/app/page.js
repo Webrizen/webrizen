@@ -304,8 +304,8 @@ export default function Home() {
                 <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
-            <h1 className="text-4xl font-bold bg-[url('/images/text-bg.gif')] bg-center bg-cover text-transparent bg-clip-text sm:text-6xl">
-              Make a move that creates a game.
+            <h1 className="text-4xl font-bold bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text sm:text-6xl">
+            Crafting Dynamic Web Applications That Inspire.
             </h1>
             <p className="mt-6 text-lg leading-8 dark:text-slate-300 text-slate-600">
               We engineer digital strategies akin to a grandmaster's meticulous
@@ -887,7 +887,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className="mt-5 sm:mt-6">
-                    <button className="bg-gray-800 hover:bg-opacity-90 text-white transition-colors ease-leaner h-12 rounded-full px-6 w-full flex items-center gap-x-3 justify-center">
+                    <Link href="/auth/sign-up" className="bg-gray-800 hover:bg-opacity-90 text-white transition-colors ease-leaner h-12 rounded-full px-6 w-full flex items-center gap-x-3 justify-center">
                       Get started{" "}
                       <span>
                         <svg
@@ -903,7 +903,7 @@ export default function Home() {
                           />
                         </svg>
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
