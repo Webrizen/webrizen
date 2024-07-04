@@ -15,7 +15,7 @@ export default function page() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 sm:text-4xl">
-            Project Inquiry
+            Create Project
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-300">
             Tell us about your project, provide information, and ask any
@@ -49,20 +49,6 @@ export default function page() {
               maxLength={5000}
               name="projectDescription"
             />
-            <Select
-              label="Budget"
-              className="w-full"
-              variant="underlined"
-              fullWidth
-              placeholder="Select your budget range"
-              name="budget"
-            >
-              <SelectItem value="500-1000">$500 - $1,000</SelectItem>
-              <SelectItem value="1000-5000">$1,000 - $5,000</SelectItem>
-              <SelectItem value="5000-10000">$5,000 - $10,000</SelectItem>
-              <SelectItem value="10000-20000">$10,000 - $20,000</SelectItem>
-              <SelectItem value="20000+">$20,000+</SelectItem>
-            </Select>
             <Input
               className="w-full"
               variant="underlined"
@@ -71,6 +57,15 @@ export default function page() {
               label="Skills Needed"
               placeholder="List required skills"
               name="skillsNeeded"
+            />
+            <Input
+              className="w-full"
+              variant="underlined"
+              fullWidth
+              clearable
+              label="Budget"
+              placeholder="$0"
+              name="Budget"
             />
             <Input
               className="w-full"
@@ -122,7 +117,7 @@ export default function page() {
               name="questionsToAgency"
             />
             <div className="flex justify-start">
-              <Checkbox name="subscribe">Subscribe to our newsletter</Checkbox>
+              <Checkbox name="subscribe">I understand the terms and conditions on legal page</Checkbox>
             </div>
             <div className="flex justify-start">
               <Button
