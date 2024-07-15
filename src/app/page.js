@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -24,6 +26,7 @@ import WebSeo from "@/assets/images/web-seo.png";
 import MobileDev from "@/assets/images/mobile.png";
 import Marketing from "@/assets/images/marketing.png";
 import Slider from "@/components/system/Slider";
+import { AnimatePresence, motion } from "framer-motion";
 
 const metrics = [
   {
@@ -266,9 +269,47 @@ const faqs = [
 ];
 
 export default function Home() {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+  // Animation variants
+  const fadeInFromTop = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const fadeInFromBottom = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const fadeInFromRight = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const flipIn = {
+    hidden: { opacity: 0, rotateY: 90, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      rotateY: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100 },
+    },
+  };
+
   return (
     <>
-      <section className="relative isolate px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center overflow-hidden">
+      <motion.section
+        ref={ref}
+        className="relative isolate px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center overflow-hidden"
+      >
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.5}
@@ -293,7 +334,13 @@ export default function Home() {
         </div>
         <div className="mx-auto md:container grid md:grid-cols-2 grid-cols-1 gap-2 md:my-0 my-12">
           <div className="md:text-left text-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8">
+            <motion.div
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={fadeInLeft}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8"
+            >
               where every move is strategic, every design a masterstroke.{" "}
               <Link
                 href="/blogs"
@@ -303,19 +350,40 @@ export default function Home() {
                 Digital Dominance with Webrizen{" "}
                 <span aria-hidden="true">&rarr;</span>
               </Link>
-            </div>
-            <h1 className="text-4xl font-bold bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text sm:text-6xl">
-            Crafting Dynamic Web Applications That Inspire.
-            </h1>
-            <p className="mt-6 text-lg leading-8 dark:text-slate-300 text-slate-600">
+            </motion.div>
+            <motion.h1
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={fadeInLeft}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-4xl font-bold bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text sm:text-6xl"
+            >
+              Crafting Dynamic Web Applications That Inspire.
+            </motion.h1>
+            <motion.p
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={fadeInLeft}
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="mt-6 text-lg leading-8 dark:text-slate-300 text-slate-600"
+            >
               We engineer digital strategies akin to a grandmaster's meticulous
               planning on a chessboard. Our team, adept at every move, crafts
               solutions that anticipate your opponent's every move.
-            </p>
-            <div className="md:max-w-[90%] backdrop-blur-3xl max-w-full mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
+            </motion.p>
+            <motion.div 
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={flipIn}
+            transition={{ delay: 0.4, duration: 0.9 }}
+            className="md:max-w-[90%] backdrop-blur-3xl max-w-full mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
               {metrics.map((metric) => (
-                <div
+                <motion.div
                   key={metric.id}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={fadeInLeft}
+                  transition={{ delay: 0.5, duration: 0.7 }}
                   className="flex items-center gap-x-4 py-4 sm:py-0"
                 >
                   <span className="w-10 h-10 text-white bg-gradient-to-br from-indigo-700 to-slate-950 rounded-md flex items-center justify-center">
@@ -329,10 +397,16 @@ export default function Home() {
                       {metric.title}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-            <div className="flex md:justify-start whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4">
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={fadeInLeft}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="flex md:justify-start whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4"
+            >
               <Link
                 href="/request-developers"
                 className="flex items-center h-12 px-6 bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded-full  hover:backdrop-blur-lg"
@@ -345,9 +419,15 @@ export default function Home() {
               >
                 Learn more
               </Link>
-            </div>
+            </motion.div>
           </div>
-          <div className="flex justify-center items-center">
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={flipIn}
+            transition={{ delay: 0.6, duration: 0.9 }}
+            className="flex justify-center items-center"
+          >
             <Image
               src={HeroImg}
               placeholder="blur"
@@ -356,7 +436,7 @@ export default function Home() {
               alt="Hero image"
               className="w-auto h-[500px] object-cover"
             />
-          </div>
+          </motion.div>
         </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -370,7 +450,7 @@ export default function Home() {
             }}
           ></div>
         </div>
-      </section>
+      </motion.section>
       <section className="py-16">
         <div className="container mx-auto flex flex-row gap-10 items-center flex-wrap justify-center relative z-20">
           {techStack.map((tech, index) => (
@@ -887,7 +967,10 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className="mt-5 sm:mt-6">
-                    <Link href="/auth/sign-up" className="bg-gray-800 hover:bg-opacity-90 text-white transition-colors ease-leaner h-12 rounded-full px-6 w-full flex items-center gap-x-3 justify-center">
+                    <Link
+                      href="/auth/sign-up"
+                      className="bg-gray-800 hover:bg-opacity-90 text-white transition-colors ease-leaner h-12 rounded-full px-6 w-full flex items-center gap-x-3 justify-center"
+                    >
                       Get started{" "}
                       <span>
                         <svg
