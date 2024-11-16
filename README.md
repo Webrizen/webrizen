@@ -32,6 +32,5 @@
 
 To learn more about our services and how we can help your business succeed in the digital world, feel free to reach out to us:
 
-- Website: [https://webrizen.in](https://webrizen.netlify.app)
+- Website: [https://webrizen.in](https://webrizen.vercel.app)
 - Email: info@webrizen.in
-- Phone: +918761820422
