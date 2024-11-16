@@ -8,34 +8,7 @@
 
 </div>
 
-## About the Founder - Arshahdul Ahmed (Arsh)
-
-<div align="center">
-  <img src="https://cdn.truelancer.com/user-picture/2291453-64bde53e0a49b.jpg" alt="Founder Arshahdul Ahmed" width="200px" style="border-radius: 50%;" />
-</div>
-
-<h1 align="center">Hi 👋, I'm Arshahdul Ahmed</h1>
-<p align="center">Hello there, I am Arshahdul Ahmed, and I live and breathe technology. As an experienced Full Stack Developer, I have danced my way through diverse landscapes. I have built seamless experiences using Next.js, MERN Stack, and polished them with the magic of Tailwind CSS. But my curiosity does not stop at the surface – I have delved into the realms of AI & ML, adding an exciting layer of intelligence to my creations. From crafting eye-catching designs to mastering the intricacies of PHP, WordPress, and APIs, I bring versatility to every project. I have tamed the wild web with platforms like Sanity.io, Firebase, Supabase, and conquered the cloud with AWS. And when it comes to collaboration, GitHub is where I thrive, turning lines of code into collaborative masterpieces. Join me on this journey of turning ideas into reality, one innovation at a time!</h3>
-
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=webrizen&label=Profile%20views&color=0e75b6&style=flat" alt="webrizen" /> </p>
-
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=webrizen" alt="webrizen" /></a> </p>
-
-<p align="center"> <a href="https://twitter.com/arshahdul_ahmed" target="blank"><img src="https://img.shields.io/twitter/follow/arshahdul_ahmed?logo=twitter&style=for-the-badge" alt="arshahdul_ahmed" /></a> </p>
-
-- 🔭 I’m currently working on [LockNotes](https://locknotes.in)
-
-- 🌱 I’m currently learning **AI & ML, Nuxt.js, Rust, Turbo, Python, UI/UX & many more.**
-
-- 👯 I’m looking to collaborate on [Vijetha Softwares](https://vijethasoftwares.com)
-
-- 🤝 I’m looking for help with [WebRizen](https://webrizen-new.vercel.app)
-
-- 👨‍💻 All of my projects are available at [https://github.com/Webrizen?tab=repositories](https://github.com/Webrizen?tab=repositories)
-
-- 💬 Ask me about **Next.js, React.js, Firebase, MongoDB, Express, Node.js, JWT, PHP, Ruby on Rails, GraphQL, Headless CMS like Sanity.io, Razorpay, Paypal, Stripe, React Native, Flutter, Spring Boot, GSAP & many more.**
-
-- 📫 How to reach me **webrizen@gmail.com**
+- 📫 How to reach us **webrizen@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
