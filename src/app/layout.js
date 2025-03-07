@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
       <body className={`!overflow-y-auto ${dM_Sans.className}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
