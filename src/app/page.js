@@ -27,70 +27,33 @@ import MobileDev from "@/assets/images/mobile.png";
 import Marketing from "@/assets/images/marketing.png";
 import Slider from "@/components/system/Slider";
 import { AnimatePresence, motion } from "framer-motion";
+import { ReactLenis } from "lenis/dist/lenis-react";
+import { PlaneIcon, RocketIcon, TrendingUpIcon } from "lucide-react";
 
 const metrics = [
   {
     id: 1,
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-        />
-      </svg>
+      <PlaneIcon className="size-6" />
     ),
-    stat: "4.7 Stars",
-    title: "43 Reviews",
+    stat: "80% Faster",
+    title: "Optimized Websites",
   },
   {
     id: 2,
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
-        />
-      </svg>
+      <RocketIcon className="size-6" />
     ),
-    stat: "24min",
-    title: "Avg. response rate",
+    stat: "3x",
+    title: "Conversions Data-Driven Designs",
   },
   {
     id: 3,
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
-        />
-      </svg>
+      <TrendingUpIcon className="size-6" />
     ),
-    stat: "+ 1k",
-    title: "Clients",
+    stat: "100% Custom",
+    title: "Tailored Solutions",
   },
 ];
 
@@ -306,6 +269,15 @@ export default function Home() {
 
   return (
     <>
+     <ReactLenis
+        root
+        options={{
+          // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
+          lerp: 0.05,
+          //   infinite: true,
+          //   syncTouch: true,
+        }}
+      >
       <motion.section
         ref={ref}
         className="relative isolate px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center overflow-hidden"
@@ -339,15 +311,16 @@ export default function Home() {
               animate={inView ? "visible" : "hidden"}
               variants={fadeInLeft}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8"
+              className="relative rounded-full px-3 py-1 text-sm leading-6 dark:text-slate-300 text-slate-600 border dark:border-[rgba(225,225,225,0.1)] border-[rgba(0,0,0,0.1)] backdrop-blur-3xl mb-8 w-min md:whitespace-nowrap"
             >
-              where every move is strategic, every design a masterstroke.{" "}
+              Webrizen builds more than just websites,
+              {" "}
               <Link
                 href="/blogs"
                 className="font-semibold dark:text-indigo-300 text-indigo-600"
               >
                 <span className="absolute inset-0" aria-hidden="true"></span>
-                Digital Dominance with Webrizen{" "}
+                we build digital experiences.{" "}
                 <span aria-hidden="true">&rarr;</span>
               </Link>
             </motion.div>
@@ -356,7 +329,7 @@ export default function Home() {
               animate={inView ? "visible" : "hidden"}
               variants={fadeInLeft}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-4xl font-bold bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text sm:text-6xl"
+              className="text-4xl font-bold bg-gradient-to-tl from-[#1e293b] via-[#6366f1] to-[#71717a] text-transparent bg-clip-text sm:text-6xl"
             >
               Crafting Dynamic Web Applications That Inspire.
             </motion.h1>
@@ -367,16 +340,14 @@ export default function Home() {
               transition={{ delay: 0.4, duration: 0.7 }}
               className="mt-6 text-lg leading-8 dark:text-slate-300 text-slate-600"
             >
-              We engineer digital strategies akin to a grandmaster's meticulous
-              planning on a chessboard. Our team, adept at every move, crafts
-              solutions that anticipate your opponent's every move.
+              At Webrizen, we don't just build websites — we architect digital ecosystems designed to captivate, convert, and conquer. Every pixel has a purpose, every interaction a strategy. Let’s craft experiences that drive real business impact.
             </motion.p>
             <motion.div 
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={flipIn}
             transition={{ delay: 0.4, duration: 0.9 }}
-            className="md:max-w-[90%] backdrop-blur-3xl max-w-full mr-auto grid sm:grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
+            className="md:max-w-[90%] backdrop-blur-3xl max-w-full mr-auto grid sm:grid-cols-3 grid-cols-3 divide-y divide-gray-100 dark:divide-gray-900 sm:divide-y-0 sm:gap-2 p-4 py-0 sm:py-4 text-left rounded-lg bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-900 shadow-sm shadow-gray-200/50 dark:shadow-transparent mt-8">
               {metrics.map((metric) => (
                 <motion.div
                   key={metric.id}
@@ -384,12 +355,12 @@ export default function Home() {
                   animate={inView ? "visible" : "hidden"}
                   variants={fadeInLeft}
                   transition={{ delay: 0.5, duration: 0.7 }}
-                  className="flex items-center gap-x-4 py-4 sm:py-0"
+                  className="flex md:flex-row flex-col items-center gap-x-4 py-4 sm:py-0"
                 >
                   <span className="w-10 h-10 text-white bg-gradient-to-br from-indigo-700 to-slate-950 rounded-md flex items-center justify-center">
                     {metric.icon}
                   </span>
-                  <div className="flex-1 flex flex-col text-lg">
+                  <div className="flex-1 flex flex-col md:text-left text-center text-lg">
                     <h4 className=" text-gray-700 dark:text-gray-300 font-semibold">
                       {metric.stat}
                     </h4>
@@ -408,10 +379,10 @@ export default function Home() {
               className="flex md:justify-start whitespace-nowrap justify-center items-center flex-wrap mt-8 md:mb-0 mb-8 gap-4"
             >
               <Link
-                href="/request-developers"
+                href="/schedule-meetings"
                 className="flex items-center h-12 px-6 bg-gradient-to-r from-[rgb(99,18,240)] to-[rgb(35,35,201)] !text-white rounded-full  hover:backdrop-blur-lg"
               >
-                Hire us Now
+                Book a meeting
               </Link>
               <Link
                 href="/about"
@@ -1134,6 +1105,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ReactLenis>
     </>
   );
 }

@@ -30,6 +30,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.2",
+    "lenis": "^1.2.1",
     "lucide-react": "^0.315.0",
     "mongoose": "^8.4.0",
     "next": "^15.2.1",
