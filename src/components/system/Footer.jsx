@@ -64,22 +64,22 @@ const footerBlocks = [
     title: "Services",
     items: [
       {
-        id: 1,
+        id: 5,
         text: "SEO Optimization",
         link: "/#services",
       },
       {
-        id: 2,
+        id: 6,
         text: "Graphic Design",
         link: "/#services",
       },
       {
-        id: 3,
+        id: 7,
         text: "Content Writing",
         link: "/#services",
       },
       {
-        id: 4,
+        id: 8,
         text: "E-commerce Solutions",
         link: "/#services",
       },
@@ -90,17 +90,17 @@ const footerBlocks = [
     title: "Company",
     items: [
       {
-        id: 1,
+        id: 9,
         text: "About Us",
         link: "/about",
       },
       {
-        id: 2,
+        id: 10,
         text: "Careers",
         link: "/careers",
       },
       {
-        id: 3,
+        id: 11,
         text: "Contact Us",
         link: "/contact",
       },
@@ -111,27 +111,27 @@ const footerBlocks = [
     title: "Resources",
     items: [
       {
-        id: 1,
+        id: 11,
         text: "Blog",
         link: "/blogs",
       },
       {
-        id: 2,
+        id: 12,
         text: "Privacy Policy",
         link: "/privacy-policy",
       },
       {
-        id: 3,
+        id: 13,
         text: "Terms of Service",
         link: "/terms-of-service",
       },
       {
-        id: 4,
+        id: 14,
         text: "FAQs",
         link: "#faqs",
       },
       {
-        id: 4,
+        id: 15,
         text: "Free Online Tools",
         link: "/free-online-tools",
       },

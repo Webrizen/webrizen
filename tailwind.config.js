@@ -2,7 +2,7 @@ import { nextui } from "@nextui-org/react";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["class", "class"],
   content: [
     "./pages/**/.{js,jsx}",
     "./components//*.{js,jsx}",
@@ -16,9 +16,7 @@ module.exports = {
       container: {
         center: true,
         padding: "2rem",
-        screens: {
-          "2xl": "1400px",
-        },
+        screens: { "2xl": "1400px" },
       },
       keyframes: {
         "accordion-down": {
@@ -33,10 +31,7 @@ module.exports = {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
-        pulse: {
-          "0%, 100%": { opacity: 1 },
-          "50%": { opacity: 0.5 },
-        },
+        pulse: { "0%, 100%": { opacity: 1 }, "50%": { opacity: 0.5 } },
         diagonal: {
           "0%": { backgroundPosition: "0% 0%" },
           "100%": { backgroundPosition: "100% 100%" },
@@ -49,18 +44,27 @@ module.exports = {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "100% 50%" },
         },
+        "shimmerx": {
+  				from: {
+  					backgroundPosition: '0 0',
+  				},
+  				to: {
+  					backgroundPosition: '-200% 0'
+  				}
+  			},
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slide": "slide 10s ease infinite",
-        "pulse": "pulse 5s ease infinite",
-        "diagonal": "diagonal 10s ease infinite",
-        "checkerboard": "checkerboard 5s ease infinite",
+        slide: "slide 10s ease infinite",
+        pulse: "pulse 5s ease infinite",
+        diagonal: "diagonal 10s ease infinite",
+        checkerboard: "checkerboard 5s ease infinite",
         "moving-gradient": "moving-gradient 5s linear infinite",
-        "rotate": "rotate 2s linear infinite",
-        "zigzag": "zigzag 2s ease-in-out infinite",
-        "wave": "wave 2s ease-in-out infinite",
+        rotate: "rotate 2s linear infinite",
+        zigzag: "zigzag 2s ease-in-out infinite",
+        wave: "wave 2s ease-in-out infinite",
+        shimmerx: 'shimmerx 2s linear infinite',
       },
     },
   },
