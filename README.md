@@ -4,65 +4,70 @@
 
 <h1 align="center">Webrizen</h1>
 
+<p align="center"><strong>Innovative. Scalable. Efficient.</strong></p>
+<p align="center">A modern web studio building high-performance websites and SaaS products.</p>
+
+---
+
+<div align="center">
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🚀 What We Do</h3>
+      <ul>
+        <li>Custom Websites</li>
+        <li>Landing Pages</li>
+        <li>E-Commerce Solutions</li>
+        <li>SEO & Web Optimization</li>
+        <li>Automation & Integrations</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🛠 Tech Stack</h3>
+      <ul>
+        <li>Next.js 15 + App Router</li>
+        <li>TypeScript & TailwindCSS</li>
+        <li>Firebase / Supabase</li>
+        <li>Framer Motion</li>
+        <li>HeroUI + Custom Components</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>📦 Products</h3>
+      <ul>
+        <li><strong>MetaMafia</strong> – Event management made simple</li>
+        <li><strong>Templatrizen</strong> – Premium Tailwind UI blocks</li>
+        <li><em>More launching soon...</em></li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>📈 Vision</h3>
+      <ul>
+        <li>Design with purpose</li>
+        <li>Code with precision</li>
+        <li>Scale with confidence</li>
+        <li>Minimal, fast, reliable</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 🌍 Connect
+
+- 🌐 [Website](https://webrizen.vercel.app)
+- 💬 DM: [Twitter(X)](https://x.com/webrizen) | [Instagram](https://www.instagram.com/webrizen)
+- ✉️ Business inquiries → webrizen@gmail.com
+
+---
+
 <p align="center">
-  <em>Innovative. Scalable. Efficient.</em><br />
-  <strong>Custom websites & SaaS solutions built to perform.</strong>
+  <img src="./src/assets/logo.png" alt="Webrizen Logo" width="48" />
 </p>
-
----
-
-## 🚀 About
-
-**Webrizen** is a product-focused web studio specializing in:
-
-- ⚡️ Custom Website Development  
-- 🛒 E-Commerce Solutions  
-- 🎯 High-Converting Landing Pages  
-- 🔁 Website Automation & Integrations  
-- 🚀 Performance Optimization  
-- 🌐 SEO and Web Standards  
-- 🧩 Webflow, Shopify, WordPress & No-Code Tools  
-- 💻 Frontend Templates, Blocks & SaaS Products  
-
-Whether you're a startup, brand, or builder — we craft fast, clean, and scalable web experiences that **just work**.
-
----
-
-## 🧠 Stack
-
-> Modern tools. Minimal overhead.
-
-- **Next.js 15**
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion**
-- **Firebase / Supabase**
-- **HeroUI / Custom UI**
-- **Vercel / Cloudflare**
-
----
-
-## 🧩 Upcoming Products
-
-> Built under Webrizen
-
-- **MetaMafia** – Smart Nextjs metadata generation platform  
-- **Templatrizen** – Premium UI blocks & Tailwind templates  
-- **[More coming soon...]**
-
----
-
-## 📫 Contact
-
-Want to work together? Have a product idea?
-
-Reach out via [webrizen.vercel.app](https://webrizen.vercel.app)  
-Or connect on [Twitter(X)](https://x.com/webrizen)
-
----
-
-<p align="center">
-  <img src="./src/assets/logo.png" alt="Webrizen Logo" width="60" />
-</p>
-
 <p align="center"><em>Design. Code. Scale.</em></p>
